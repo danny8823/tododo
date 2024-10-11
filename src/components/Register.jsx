@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Form, Row, Button, Modal } from 'react-bootstrap'
+import { Col, Form, Row, Button } from 'react-bootstrap'
 
 const Register = () => {
   return (
