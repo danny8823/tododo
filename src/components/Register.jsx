@@ -54,6 +54,7 @@ const Register = () => {
                 <Form.Label column sm = "3">Email Address</Form.Label>
                 <Col sm = '9'>
                     <Form.Control
+                        id = 'email'
                         type = 'email'
                         placeholder = 'name@example'
                         onChange={formik.handleChange}
@@ -66,6 +67,7 @@ const Register = () => {
                 <Form.Label column sm = "3">Username</Form.Label>
                 <Col sm = '9'>
                     <Form.Control
+                        id = 'username'
                         type = 'text'
                         placeholder = 'username'
                         onChange={formik.handleChange}
@@ -79,6 +81,7 @@ const Register = () => {
                 <Form.Label column sm = "3">Password</Form.Label>
                 <Col sm = '9'>
                     <Form.Control
+                        id = 'password'
                         type = 'password'
                         placeholder = 'password'
                         onChange={formik.handleChange}
@@ -91,6 +94,7 @@ const Register = () => {
                 <Form.Label column sm = "3">Confirm password</Form.Label>
                 <Col sm = '9'>
                     <Form.Control
+                        id = 'confirmPassword'
                         type = 'password'
                         placeholder = 'confirm-password'
                         onChange={formik.handleChange}
