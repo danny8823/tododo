@@ -39,9 +39,7 @@ const Dashboard = () => {
     },[])
 
     const handleDel = async (id) => {
-        console.log('del', id)
         await deleteTodoAPI(id)
-        window.location.reload()
     }
 
     const handleLogout = () => {
