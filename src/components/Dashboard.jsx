@@ -50,8 +50,8 @@ const Dashboard = () => {
     }
 
   return (
-    <div className = 'w-screen flex flex-row'>
-        <div className = 'w-6/12'>
+    <div className = 'w-screen flex flex-col-reverse sm:flex-row'>
+        <div className = 'sm:w-6/12'>
             <div className = 'bg-blue-200 h-screen p-2'>
                 <h1 className = 'text-center'>My Tasks</h1>
                 <div className = 'flex flex-col'>
@@ -64,7 +64,7 @@ const Dashboard = () => {
                 </div>
             </div>
         </div>
-        <div className = 'w-6/12 h-screen m-auto bg-blue-100'>
+        <div className = 'w-screen sm:w-6/12 h-screen m-auto bg-blue-100'>
             <h1 className = 'text-center'>Welcome back, {user?.username}!</h1>
             <Clock className = 'm-auto' value = {value}/><br/>
             <p className = 'text-center'>{value.toLocaleString()}</p>

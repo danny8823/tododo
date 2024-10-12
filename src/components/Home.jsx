@@ -29,6 +29,7 @@ const Home = () => {
     onSubmit: (values) => {
       mutateAsync(values)
         .then((data)=> {
+          console.log('data', data)
           dispatch(loginAction(data))
           localStorage.setItem('userInfo', JSON.stringify(data))
           navigate('/dashboard')
@@ -42,13 +43,13 @@ const Home = () => {
   return (
     <div className = 'w-screen h-screen flex flex-col justify-center items-center'>
             <Form 
-              className = 'bg-slate-300 p-4 h-2/4 w-2/4 rounded-lg shadow-inner'
+              className = 'bg-slate-300 p-4 h-2/4 md:w-2/4 lg:w-2/3 rounded-lg shadow-inner'
               onSubmit={formik.handleSubmit}>
                 <Form.Group>
-                    <Form.Label className = 'text-2xl'>Email address</Form.Label>
+                    <Form.Label className = 'sm:text-sm md:text-3xl'>Email address</Form.Label>
                     <Form.Control 
                         id = 'email'
-                        className = 'mb-4'
+                        className = ' mb-4'
                         size = 'lg' 
                         type="email" 
                         placeholder="name@example.com" 
@@ -56,10 +57,10 @@ const Home = () => {
                         value = {formik.values.email}/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label className = 'text-2xl'>Password</Form.Label>
+                    <Form.Label className = 'sm:text-sm md:text-3xl'>Password</Form.Label>
                     <Form.Control 
                         id = 'password'
-                        className = 'mb-4'
+                        className = ' mb-4'
                         size = 'lg' 
                         type="password" 
                         placeholder="password" 
