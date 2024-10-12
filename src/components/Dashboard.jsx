@@ -24,17 +24,19 @@ const Dashboard = () => {
         queryFn: () => fetchTodoAPI(user?.id),
         queryKey: ['LIST-TODO', user?.id]
     })
+
     useEffect(() => {
         const user = getUserFromStorage()
         if(user) {
             setUser(user)
+        } else {
+            setUser('guest')
         }
         const interval = setInterval(()=> setValue(new Date()),1000)
 
         return () => {
             clearInterval(interval)
         }
-
     
     },[])
 
