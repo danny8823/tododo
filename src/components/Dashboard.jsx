@@ -40,6 +40,7 @@ const Dashboard = () => {
 
     const handleDel = async (id) => {
         await deleteTodoAPI(id)
+        navigate('/dashboard')
     }
 
     const handleLogout = () => {

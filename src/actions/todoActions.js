@@ -19,7 +19,6 @@ export const fetchTodoAPI = async(id) => {
 }
 
 export const deleteTodoAPI = async(id) => {
-    console.log('api fired', id)
     const response = await axios.delete(`${BASE_URL}/api/todos/delete?id=${id}`, {
         id
     })
