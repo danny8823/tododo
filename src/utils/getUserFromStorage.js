@@ -1,5 +1,5 @@
 export const getUserFromStorage = () => {
-    const token = JSON.parse(localStorage.getItem('userInfo') || null)
+    const user = JSON.parse(localStorage.getItem('userInfo') || null)
 
-    return token?.token
+    return user
 }

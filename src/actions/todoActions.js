@@ -11,14 +11,16 @@ export const createTodoAPI = async({task,description,user}) => {
     return response.data
 }
 
-export const fetchTodoAPI = async({userId}) => {
-    const response = await axios.get(`${BASE_URL}/api/todos/fetch?userId=${userId}`)
+export const fetchTodoAPI = async(id) => {
+    
+    const response = await axios.get(`${BASE_URL}/api/todos/fetch?userId=${id}`)
 
     return response.data
 }
 
-export const deleteTodoAPI = async({id}) => {
-    const response = await axios.delete(`${BASE_URL}/api/todos/delete`, {
+export const deleteTodoAPI = async(id) => {
+    console.log('api fired', id)
+    const response = await axios.delete(`${BASE_URL}/api/todos/delete?id=${id}`, {
         id
     })
 

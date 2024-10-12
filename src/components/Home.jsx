@@ -15,6 +15,7 @@ const Home = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  
   const {mutateAsync, isPending, isError, isSuccess} = useMutation({
     mutationFn: loginAPI,
     mutationKey: ['login']
@@ -28,7 +29,6 @@ const Home = () => {
     onSubmit: (values) => {
       mutateAsync(values)
         .then((data)=> {
-          console.log('data', data)
           dispatch(loginAction(data))
           localStorage.setItem('userInfo', JSON.stringify(data))
           navigate('/dashboard')
