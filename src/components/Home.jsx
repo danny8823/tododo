@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <div className = 'w-screen h-screen flex flex-col justify-center items-center'>
             <Form 
-              className = 'bg-slate-300 p-4 h-2/4 md:w-2/4 lg:w-2/3 rounded-lg shadow-inner'
+              className = 'bg-slate-300 p-4 h-2/4 w-3/4 md:w-1/3 sm:w-1/3 rounded-lg shadow-inner'
               onSubmit={formik.handleSubmit}>
                 <Form.Group>
                     <Form.Label className = 'sm:text-sm md:text-3xl'>Email address</Form.Label>
