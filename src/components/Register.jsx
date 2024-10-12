@@ -103,7 +103,7 @@ const Register = () => {
                 <span>{formik.errors.confirmPassword}</span>)}
                 </Col>
             </Form.Group>
-            <Button className = 'w-full' variant = 'info'>Register</Button>
+            <Button type = 'submit' className = 'w-full' variant = 'info'>Register</Button>
         </Form>
         {isPending && <Spinner animation = 'border' role = 'status'/>}
         {isError && <Alert variant = 'warning'>{error}</Alert>}
