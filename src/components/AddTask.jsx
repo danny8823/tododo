@@ -3,14 +3,11 @@ import { Col, Form, Row, Button,Spinner, Alert } from 'react-bootstrap'
 import { useFormik } from 'formik'
 import { useMutation } from '@tanstack/react-query'
 import { createTodoAPI } from '../actions/todoActions'
-import { useNavigate } from 'react-router-dom'
-
 const AddTask = ({user}) => {
     const {mutateAsync, isPending, isError, error, isSuccess} = useMutation({
         mutationFn: createTodoAPI,
         mutationKey: ['create-todo']
     })
-    const navigate = useNavigate()
 
     const formik = useFormik({
         initialValues: {
